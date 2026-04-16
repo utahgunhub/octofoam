@@ -33,7 +33,7 @@ const Contact = () => (
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
 
         <motion.div
-          className="relative z-10 w-full px-4 py-14 md:py-16"
+          className="relative z-10 w-full px-4 pt-20 pb-32 md:pt-24 md:pb-36"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
@@ -63,20 +63,11 @@ const Contact = () => (
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-14 md:h-20 block">
-            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill="#5c97d0" />
+            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill={light} />
           <path d="M0,40 Q360,0 720,40 T1440,40" fill="none" stroke="#634390" strokeOpacity="1" strokeWidth="6" />
           </svg>
         </div>
       </section>
-
-      <CurvedDivider
-        topColor={navyBlock}
-        bottomColor={light}
-        accentColor={mint}
-        direction="up"
-        transparentBottom
-        className="relative z-10"
-      />
 
       <ContactSection variant="page" />
 

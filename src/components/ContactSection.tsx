@@ -22,15 +22,17 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
       "relative px-4 overflow-hidden",
       isHome
         ? "-mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-[176px] pb-[160px] md:pt-[216px] md:pb-[200px]"
-        : "relative -mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-24 md:pt-32 pb-36 md:pb-48 lg:pb-56",
+        : "py-16 md:py-20 bg-background",
     )}
   >
-    <div className="absolute inset-0">
-      <img src="/octofoam-images/315866020_146550111455910_8963563536704620667_n-1920w.webp" alt="" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 z-[1]" style={{ backgroundColor: "rgba(255,255,255,0.92)" }} />
-    </div>
+    {isHome ? (
+      <div className="absolute inset-0">
+        <img src="/octofoam-images/315866020_146550111455910_8963563536704620667_n-1920w.webp" alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 z-[1]" style={{ backgroundColor: "rgba(255,255,255,0.92)" }} />
+      </div>
+    ) : null}
     <div className="container max-w-6xl mx-auto relative z-10">
-      <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+      <div className={cn("grid lg:grid-cols-2 items-start", isHome ? "gap-16 lg:gap-24" : "gap-10 lg:gap-14")}>
         {/* Left: Headline + contact info */}
         <ScrollReveal variant="slideLeft">
         <div>

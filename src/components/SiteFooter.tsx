@@ -42,15 +42,24 @@ const SiteFooter = () => (
             <span>3581 W US Hwy 40<br />Greenfield, IN 46140</span>
           </div>
           <div className="flex gap-4 mt-4">
-            {[Facebook, Instagram].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                className="w-10 h-10 rounded-full bg-accent-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors"
-              >
-                <Icon size={18} />
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/octofoam"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Octofoam on Facebook"
+              className="w-10 h-10 rounded-full bg-accent-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors"
+            >
+              <Facebook size={18} />
+            </a>
+            <a
+              href="https://www.instagram.com/octofoam"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Octofoam on Instagram"
+              className="w-10 h-10 rounded-full bg-accent-foreground/10 flex items-center justify-center hover:bg-secondary transition-colors"
+            >
+              <Instagram size={18} />
+            </a>
           </div>
         </div>
       </div>

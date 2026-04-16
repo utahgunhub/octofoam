@@ -53,7 +53,7 @@ const ServiceAreasSection = () => (
             </div>
             <div className="flex justify-center lg:justify-start">
               <Button size="lg" className="rounded-xl font-bold gap-2 bg-white border-2 border-[#634390] text-[#634390] hover:bg-[#634390]/5" asChild>
-                <Link to="/service-areas/salt-lake-city">
+                <Link to="/service-areas">
                   <MapPin size={18} />
                   View service areas
                 </Link>

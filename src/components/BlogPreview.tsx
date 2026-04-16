@@ -2,9 +2,9 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ScrollReveal";
-import { blogPosts } from "@/content/blogPosts";
+import { resourcePosts } from "@/content/resourcesPosts";
 
-const previewPosts = blogPosts.slice(0, 3);
+const previewPosts = resourcePosts.slice(0, 3);
 
 const BlogPreview = () => (
   <section className="relative -mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-[120px] pb-[120px] md:pt-[160px] md:pb-[160px] px-4 overflow-hidden">
@@ -25,7 +25,7 @@ const BlogPreview = () => (
         {previewPosts.map((p) => (
           <ScrollRevealItem key={p.slug}>
             <Link
-              to={`/blog/${p.slug}`}
+              to={`/resources/${p.slug}`}
               className="block bg-card rounded-2xl p-8 shadow-card hover:shadow-elevated transition-shadow group text-left h-full"
             >
               <span className="text-sm text-muted-foreground">{p.date}</span>
@@ -43,7 +43,7 @@ const BlogPreview = () => (
       <ScrollReveal>
       <div className="text-center mt-10">
         <Button variant="default" size="lg" className="rounded-xl gap-2" asChild>
-          <Link to="/blog">
+          <Link to="/resources">
             View All Blogs <ArrowRight size={18} />
           </Link>
         </Button>
