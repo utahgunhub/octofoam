@@ -15,8 +15,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 50% 12%;
 
-    --primary: 160 100% 50%;
-    --primary-foreground: 220 50% 10%;
+    --primary: 99 42% 54%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 200 100% 50%;
     --secondary-foreground: 0 0% 100%;
@@ -24,7 +24,7 @@
     --muted: 170 25% 93%;
     --muted-foreground: 220 20% 45%;
 
-    --accent: 225 100% 32%;
+    --accent: 209 55% 59%;
     --accent-foreground: 0 0% 100%;
 
     --accent-warm: 38 100% 50%;
@@ -35,28 +35,28 @@
 
     --border: 170 20% 87%;
     --input: 170 20% 87%;
-    --ring: 160 100% 50%;
+    --ring: 99 42% 54%;
 
     --radius: 0.75rem;
 
-    --gradient-hero: linear-gradient(135deg, hsla(225, 100%, 32%, 0.92), hsla(174, 100%, 45%, 0.85));
-    --gradient-cta: linear-gradient(135deg, hsl(160, 100%, 50%), hsl(174, 100%, 45%));
-    --gradient-blue: linear-gradient(135deg, hsl(200, 100%, 50%), hsl(225, 100%, 50%));
-    --gradient-accent: linear-gradient(135deg, hsl(225, 100%, 32%), hsl(225, 100%, 22%));
-    --shadow-card: 0 8px 30px -8px hsla(225, 100%, 20%, 0.12);
-    --shadow-elevated: 0 16px 50px -12px hsla(225, 100%, 20%, 0.18);
+    --gradient-hero: linear-gradient(90deg, rgba(92, 151, 208, 0.92) 60%, rgba(99, 67, 144, 0.85) 80%);
+    --gradient-cta: linear-gradient(135deg, #7cbb5a, #7cbb5a);
+    --gradient-blue: linear-gradient(135deg, hsl(200, 100%, 50%), #5c97d0);
+    --gradient-accent: linear-gradient(135deg, #5c97d0, #5c97d0);
+    --shadow-card: 0 8px 30px -8px rgba(0, 0, 0, 0.12);
+    --shadow-elevated: 0 16px 50px -12px rgba(0, 0, 0, 0.18);
 
     --font-display: 'Rubik', sans-serif;
     --font-body: 'Nunito', sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 220 30% 26%;
-    --sidebar-primary: 160 100% 50%;
-    --sidebar-primary-foreground: 220 50% 10%;
+    --sidebar-primary: 99 42% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 170 25% 93%;
     --sidebar-accent-foreground: 220 50% 12%;
     --sidebar-border: 170 20% 87%;
-    --sidebar-ring: 160 100% 50%;
+    --sidebar-ring: 99 42% 54%;
   }
 }
 
@@ -76,7 +76,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(160, 100%, 50%), hsl(200, 100%, 50%));
+    background-image: linear-gradient(90deg, #5c97d0 60%, #634390 80%);
   }
 }
 

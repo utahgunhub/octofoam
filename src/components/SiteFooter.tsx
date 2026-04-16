@@ -1,14 +1,14 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 
 const SiteFooter = () => (
-  <footer className="bg-accent text-accent-foreground pt-16 pb-8 px-4">
+  <footer className="bg-accent text-accent-foreground pt-8 pb-8 px-4">
     <div className="container max-w-6xl mx-auto">
       <div className="grid md:grid-cols-3 gap-12 mb-12">
         {/* Helpful Links */}
         <div>
-          <h3 className="font-bold text-lg mb-4 font-display">Helpful Links</h3>
+          <h3 className="font-bold text-lg mb-4 font-display">Our Services</h3>
           <ul className="space-y-2 text-accent-foreground/80">
-            {["Services", "Maintenance Plans", "Coupons", "Financing", "Contact"].map((link) => (
+            {["Attic Insulation", "Crawl Space Insulation", "Metal Building Insulation", "Concrete Leveling", "SPF Roof Coatings"].map((link) => (
               <li key={link}>
                 <a href="#" className="hover:text-secondary transition-colors">{link}</a>
               </li>
@@ -18,18 +18,18 @@ const SiteFooter = () => (
 
         {/* Company Info */}
         <div>
-          <h3 className="font-bold text-lg mb-4 font-display">Peak HVAC Services</h3>
+          <h3 className="font-bold text-lg mb-4 font-display">Octofoam, LLC</h3>
           <p className="text-accent-foreground/80 mb-4">
-            Your trusted HVAC company in Salt Lake City, UT. Serving the community since 1987.
+            Your spray foam insulation company of choice in Greenfield, IN. Proudly serving agricultural, commercial, and residential clients.
           </p>
           <div className="flex flex-col gap-2">
-            <a href="tel:8017382275" className="flex items-center gap-2 text-secondary font-bold hover:underline">
+            <a href="tel:3179670505" className="flex items-center gap-2 text-white font-bold hover:underline">
               <Phone size={18} />
-              <span>(801) 738-2275</span>
+              <span>(317) 967-0505</span>
             </a>
-            <a href="mailto:Hummingbirdhomes22@gmail.com" className="flex items-center gap-2 text-accent-foreground/80 hover:text-secondary transition-colors">
+            <a href="mailto:info@octofoam.com" className="flex items-center gap-2 text-accent-foreground/80 hover:text-secondary transition-colors">
               <Mail size={18} />
-              <span>Hummingbirdhomes22@gmail.com</span>
+              <span>info@octofoam.com</span>
             </a>
           </div>
         </div>
@@ -37,12 +37,12 @@ const SiteFooter = () => (
         {/* Address */}
         <div>
           <h3 className="font-bold text-lg mb-4 font-display">Find Us</h3>
-          <div className="flex items-start gap-2 text-accent-foreground/80 mb-4">
+          <div className="flex items-start gap-2 text-accent-foreground/80 mb-2">
             <MapPin size={18} className="mt-1 flex-shrink-0" />
-            <span>Salt Lake City, UT</span>
+            <span>3581 W US Hwy 40<br />Greenfield, IN 46140</span>
           </div>
           <div className="flex gap-4 mt-4">
-            {[Facebook, Instagram, Twitter].map((Icon, i) => (
+            {[Facebook, Instagram].map((Icon, i) => (
               <a
                 key={i}
                 href="#"
@@ -56,7 +56,7 @@ const SiteFooter = () => (
       </div>
 
       <div className="border-t border-accent-foreground/10 pt-6 text-center text-sm text-accent-foreground/50">
-        © 2026 Peak HVAC Services Utah. All rights reserved.
+        © 2026 Octofoam, LLC. All Rights Reserved.
       </div>
     </div>
   </footer>

@@ -21,12 +21,12 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
     className={cn(
       "relative px-4 overflow-hidden",
       isHome
-        ? "-mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-[176px] pb-[80px] md:pt-[216px] md:pb-[120px]"
-        : "relative -mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-24 md:pt-32 pb-24 md:pb-32 lg:pb-36",
+        ? "-mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-[176px] pb-[160px] md:pt-[216px] md:pb-[200px]"
+        : "relative -mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-24 md:pt-32 pb-36 md:pb-48 lg:pb-56",
     )}
   >
     <div className="absolute inset-0">
-      <img src="/background-4.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <img src="/octofoam-images/315866020_146550111455910_8963563536704620667_n-1920w.webp" alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 z-[1]" style={{ backgroundColor: "rgba(255,255,255,0.92)" }} />
     </div>
     <div className="container max-w-6xl mx-auto relative z-10">
@@ -34,49 +34,49 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
         {/* Left: Headline + contact info */}
         <ScrollReveal variant="slideLeft">
         <div>
-          <p className="text-[#001c70] font-bold uppercase tracking-[0.25em] mb-4">
+          <p className="text-[#5c97d0] font-bold uppercase tracking-[0.25em] mb-4">
             Get In Touch
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-6 font-display leading-[1.1] tracking-tight">
-            Ready to fix your HVAC?
+            Ready to insulate your space?
           </h2>
           <p className="text-muted-foreground text-lg mb-12 max-w-md">
-            Same-day service available. Fill out the form and we&apos;ll get back to you within an hour—or call now for immediate help.
+            Call or text us for a free estimate on spray foam insulation services. We&apos;ll get back to you quickly.
           </p>
 
           <div className="space-y-6">
             <a
-              href="tel:8017382275"
+              href="tel:3179670505"
               className="flex items-center gap-4 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#001c70]/10 flex items-center justify-center group-hover:bg-[#001c70]/20 transition-colors">
-                <Phone size={22} className="text-[#001c70]" />
+              <div className="w-12 h-12 rounded-xl bg-[#5c97d0]/10 flex items-center justify-center group-hover:bg-[#5c97d0]/20 transition-colors">
+                <Phone size={22} className="text-[#5c97d0]" />
               </div>
               <div>
-                <p className="text-sm font-medium text-foreground">Call Now</p>
-                <p className="text-xl font-bold text-foreground">(801) 738-2275</p>
+                <p className="text-sm font-medium text-foreground">Call or Text</p>
+                <p className="text-xl font-bold text-foreground">(317) 967-0505</p>
               </div>
             </a>
             <a
-              href="mailto:Hummingbirdhomes22@gmail.com"
+              href="mailto:info@octofoam.com"
               className="flex items-center gap-4 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-[#001c70]/10 flex items-center justify-center group-hover:bg-[#001c70]/20 transition-colors">
-                <Mail size={22} className="text-[#001c70]" />
+              <div className="w-12 h-12 rounded-xl bg-[#5c97d0]/10 flex items-center justify-center group-hover:bg-[#5c97d0]/20 transition-colors">
+                <Mail size={22} className="text-[#5c97d0]" />
               </div>
               <div>
                 <p className="text-sm font-medium text-foreground">Email</p>
-                <p className="text-lg font-bold text-foreground">Hummingbirdhomes22@gmail.com</p>
+                <p className="text-lg font-bold text-foreground">info@octofoam.com</p>
               </div>
             </a>
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-[#001c70]/10 flex items-center justify-center flex-shrink-0">
-                <MapPin size={22} className="text-[#001c70]" />
+              <div className="w-12 h-12 rounded-xl bg-[#5c97d0]/10 flex items-center justify-center flex-shrink-0">
+                <MapPin size={22} className="text-[#5c97d0]" />
               </div>
               <div>
                 <p className="text-sm font-medium text-foreground">Address</p>
                 <p className="text-lg font-semibold text-foreground">
-                  Salt Lake City, UT
+                  3581 W US Hwy 40, Greenfield, IN 46140
                 </p>
               </div>
             </div>
@@ -112,7 +112,7 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="(801) 738-2275"
+                  placeholder="(317) 967-0505"
                   className="h-12 rounded-xl border-2 bg-white"
                 />
               </div>
@@ -134,7 +134,7 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
               </Label>
               <Textarea
                 id="message"
-                placeholder="Tell us about your HVAC needs—repair, installation, maintenance..."
+                placeholder="Tell us about your project—attic, crawl space, metal building, roof coating..."
                 className="min-h-[140px] rounded-xl border-2 bg-white resize-none"
               />
             </div>

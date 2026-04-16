@@ -3,33 +3,33 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    text: "Peak HVAC saved us during a freezing winter night. Their technician arrived within an hour and had our furnace running in no time. Mike and the rest of the team were so great to work with. Incredible service!",
+    name: "Vera B.",
+    text: "Very professional and 100% would recommend Octofoam to anyone!! I've used them many times. They're very experienced and do a fantastic job every time!!",
     rating: 5,
   },
   {
-    name: "James R.",
-    text: "We've used Peak HVAC for our maintenance plan for 3 years now. Always professional, always on time. The technician was very friendly and took time to explain the work. Our AC has never run better. Highly recommend!",
+    name: "Tom H.",
+    text: "Octofoam insulated our metal barn and the difference in temperature is remarkable. The crew was fast, clean, and professional. Couldn't be happier with the results.",
     rating: 5,
   },
   {
-    name: "Linda K.",
-    text: "The team was fast. They removed the old AC and installed the new units in around 6 hours. Every team member was friendly and courteous. The $250 off coupon was a great bonus! Thank you Peak HVAC!",
+    name: "Karen M.",
+    text: "Had our attic done last fall and our heating bills have dropped significantly. Great team to work with — they explained everything and finished on time.",
     rating: 5,
   },
   {
-    name: "David T.",
-    text: "Best HVAC company in the valley. They fixed our furnace in under an hour and the price was fair. Will definitely use them again for our AC tune-up this spring.",
+    name: "Dave R.",
+    text: "We hired Octofoam for our crawl space. They were on time, reasonably priced, and did excellent work. The crawl space is completely sealed now. Highly recommend.",
     rating: 5,
   },
   {
-    name: "Jennifer L.",
-    text: "Professional from start to finish. The new AC installation was seamless and our home has never been more comfortable. Peak HVAC is our go-to for all heating and cooling needs.",
+    name: "Jessica L.",
+    text: "Professional from start to finish. The spray foam insulation in our new construction home has made a huge difference. Octofoam is our go-to for insulation needs.",
     rating: 5,
   },
   {
-    name: "Robert H.",
-    text: "Called for an emergency repair on a Saturday. They came out same day and had our heat back on before dinner. Outstanding customer service and fair pricing.",
+    name: "Mark S.",
+    text: "Used Octofoam for our commercial building. The SPF roof coating has held up great and our energy costs are down. Fair pricing and outstanding workmanship.",
     rating: 5,
   },
 ];
@@ -43,7 +43,7 @@ const TestimonialCard = ({ t }: { t: (typeof testimonials)[0] }) => (
       <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[12px] border-r-[12px] border-t-[12px] border-l-transparent border-r-transparent border-t-card" />
     </div>
     <div className="flex items-center gap-3">
-      <div className="w-10 h-10 rounded-full bg-secondary/30 flex items-center justify-center text-secondary font-bold font-display">
+      <div className="w-10 h-10 rounded-full bg-[#7cbb5a] flex items-center justify-center text-white font-bold font-display">
         {t.name[0]}
       </div>
       <span className="font-bold text-accent-foreground font-display">{t.name}</span>
@@ -63,8 +63,8 @@ const Testimonials = () => (
       <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-2 font-display text-accent-foreground uppercase tracking-wide">
         Customer Testimonials
       </h2>
-      <p className="text-center text-secondary font-bold text-xl uppercase tracking-wide">
-        See What Our Customers Are Saying!
+      <p className="text-center font-bold text-xl uppercase tracking-wide" style={{ color: "#634390" }}>
+        See What Our Clients Are Saying!
       </p>
     </div>
     </ScrollReveal>

@@ -9,12 +9,12 @@ import CurvedDivider from "@/components/CurvedDivider";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-slc.jpg";
 
-const dark = "hsl(225, 100%, 32%)";
+const dark = "#5c97d0";
 const light = "hsl(170, 40%, 97%)";
 const white = "#ffffff";
-const mint = "hsl(160, 100%, 50%)";
+const mint = "#634390";
 const skyBlue = "hsl(200, 100%, 50%)";
-const navyBlock = "#001c70";
+const navyBlock = "#5c97d0";
 
 export type AcPageVisualVariant = "repair" | "installation" | "maintenance" | "hub";
 
@@ -90,7 +90,7 @@ function FeaturesGrid({
 function MidSection({ variant }: { variant: AcPageVisualVariant }) {
   if (variant === "repair") {
     return (
-      <section className="bg-[#001c70] py-5 px-4 border-b border-white/10">
+      <section className="bg-[#5c97d0] py-5 px-4 border-b border-white/10">
         <p className="text-center text-sm md:text-base font-bold text-white max-w-3xl mx-auto">
           <span className="text-primary">AC repair</span>
           {" · "}
@@ -102,7 +102,7 @@ function MidSection({ variant }: { variant: AcPageVisualVariant }) {
 
   if (variant === "installation") {
     return (
-      <section className="py-12 px-4 bg-[#001c70]">
+      <section className="py-12 px-4 bg-[#5c97d0]">
         <div className="container max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
           <div>
             <img
@@ -127,7 +127,7 @@ function MidSection({ variant }: { variant: AcPageVisualVariant }) {
 
   if (variant === "maintenance") {
     return (
-      <section className="py-12 px-4 bg-[#001c70]">
+      <section className="py-12 px-4 bg-[#5c97d0]">
         <div className="container max-w-5xl mx-auto flex flex-col lg:flex-row gap-10 items-center">
           <img
             src="/cooling.png"
@@ -154,7 +154,7 @@ function MidSection({ variant }: { variant: AcPageVisualVariant }) {
   }
 
   return (
-    <section className="py-10 px-4 bg-[#001c70]">
+    <section className="py-10 px-4 bg-[#5c97d0]">
       <div className="container max-w-6xl mx-auto grid md:grid-cols-3 gap-4">
         <Link
           to="/air-conditioning/repair"
@@ -250,7 +250,8 @@ const AcServicePageLayout = ({
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-14 md:h-20 block">
-            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill="hsl(225, 100%, 22%)" />
+            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill="#5c97d0" />
+          <path d="M0,40 Q360,0 720,40 T1440,40" fill="none" stroke="#634390" strokeOpacity="1" strokeWidth="6" />
           </svg>
         </div>
       </section>
@@ -271,7 +272,7 @@ const AcServicePageLayout = ({
           <img src={bgSrc(contentBg)} alt="" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 z-[1]" style={{ backgroundColor: "rgba(255,255,255,0.92)" }} />
         </div>
-        <div className={`container ${contentMax} mx-auto relative z-10 space-y-6 text-[#001c70]/90 leading-relaxed`}>
+        <div className={`container ${contentMax} mx-auto relative z-10 space-y-6 text-[#5c97d0]/90 leading-relaxed`}>
           {children}
         </div>
       </section>
@@ -308,7 +309,7 @@ const AcServicePageLayout = ({
                   <Phone size={18} /> Call now
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#001c70] text-[#001c70] hover:bg-[#001c70]/5 gap-2" asChild>
+              <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#5c97d0] text-[#5c97d0] hover:bg-[#5c97d0]/5 gap-2" asChild>
                 <Link to="/contact">
                   Contact form <ArrowRight size={18} />
                 </Link>

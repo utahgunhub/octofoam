@@ -19,38 +19,38 @@ import {
 import { NavLink } from "@/components/NavLink";
 
 const navItemsLeft = [
-  { label: "HOME", to: "/" },
-  { label: "COUPONS", to: "/coupons" },
   {
-    label: "AIR CONDITIONING",
+    label: "INSULATION",
     items: [
-      { label: "AC Repair", href: "/air-conditioning/repair" },
-      { label: "AC Installation", href: "/air-conditioning/installation" },
-      { label: "AC Maintenance", href: "/air-conditioning/maintenance" },
+      { label: "Attic Insulation", href: "/attic-insulation" },
+      { label: "Crawl Space Insulation", href: "/crawl-space-insulation" },
+      { label: "Metal Building Insulation", href: "/metal-building-insulation" },
     ],
   },
   {
-    label: "HEATING",
+    label: "ROOFING",
     items: [
-      { label: "Furnace Repair", href: "/heating/furnace-repair" },
-      { label: "Furnace Installation", href: "/heating/furnace-installation" },
-      { label: "Heating Maintenance", href: "/heating/maintenance" },
+      { label: "SPF Roof Benefits", href: "/spf-roof-benefits" },
+      { label: "SPF Roof Coatings", href: "/spf-roof-coatings" },
     ],
   },
+  { label: "CONCRETE LEVELING", to: "/concrete-leveling" },
 ];
 
 const navItemsRight = [
+  { label: "GALLERY", to: "/gallery" },
+  { label: "RESOURCES", to: "/resources" },
+  { label: "CONTACT", to: "/contact" },
   {
-    label: "SERVICE AREAS",
+    label: "INFO",
     items: [
-      { label: "Salt Lake City", href: "/service-areas/salt-lake-city" },
-      { label: "Utah County", href: "/service-areas/utah-county" },
-      { label: "Davis County", href: "/service-areas/davis-county" },
+      { label: "R-Value Fairy Tale", href: "/r-value-fairy-tale" },
+      { label: "Types of Spray Foam", href: "/types-of-spray-foam" },
+      { label: "Foam for Farmers", href: "/foam-for-farmers" },
+      { label: "Areas We Serve", href: "/service-areas" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
-  { label: "ABOUT US", to: "/about" },
-  { label: "CONTACT US", to: "/contact" },
-  { label: "BLOG", to: "/blog" },
 ];
 
 const allNavLinks = [
@@ -68,29 +68,29 @@ const SiteHeader = () => {
       className="absolute left-1/2 top-[72%] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-auto"
     >
       <img
-        src="/LOGO.png"
-        alt="Peak HVAC Services"
+        src="/octofoam-images/octofoam-logo.png"
+        alt="Octofoam Spray Foam Insulation"
         className="h-20 md:h-28 lg:h-36 w-auto object-contain drop-shadow-lg"
       />
     </NavLink>
 
     {/* Pre-header bar */}
-    <div className="bg-secondary text-secondary-foreground px-3 md:px-4 py-1.5 md:py-2 relative z-0">
+    <div className="bg-[#5c97d0] text-white px-3 md:px-4 py-1.5 md:py-2 relative z-0">
       <div className="container max-w-7xl mx-auto flex flex-nowrap items-center justify-between gap-2 md:gap-4">
         <div className="flex items-center gap-2 md:gap-4 min-w-0">
-          <span className="hidden md:inline text-sm font-semibold whitespace-nowrap">
+          <span className="hidden md:inline text-sm font-semibold whitespace-nowrap text-white">
             STAY CONNECTED WITH US:
           </span>
           <div className="flex items-center gap-1.5 md:gap-2">
             <a
               href="#"
-              className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors text-[#0029a3] flex-shrink-0"
+              className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors text-primary-foreground flex-shrink-0"
             >
               <Facebook className="w-3 h-3 md:w-4 md:h-4" />
             </a>
             <a
               href="#"
-              className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors text-[#0029a3] flex-shrink-0"
+              className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center hover:bg-primary/90 transition-colors text-primary-foreground flex-shrink-0"
             >
               <Instagram className="w-3 h-3 md:w-4 md:h-4" />
             </a>
@@ -98,18 +98,18 @@ const SiteHeader = () => {
         </div>
         <div className="flex items-center gap-2 md:gap-4 flex-shrink-0 flex-1 md:flex-initial justify-end">
           <a
-            href="tel:8017382275"
-            className="flex items-center justify-center gap-1.5 md:gap-2 font-bold text-xs md:text-base flex-shrink-0 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 md:bg-transparent md:text-secondary-foreground md:hover:underline h-6 px-2.5 md:h-auto md:px-0"
+            href="tel:3179670505"
+            className="flex items-center justify-center gap-1.5 md:gap-2 font-bold text-xs md:text-base flex-shrink-0 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 md:bg-transparent md:text-white md:hover:underline h-6 px-2.5 md:h-auto md:px-0"
           >
             <Phone className="hidden md:block w-[18px] h-[18px] flex-shrink-0" />
-            <span className="whitespace-nowrap">(801) 738-2275</span>
+            <span className="whitespace-nowrap">(317) 967-0505</span>
           </a>
           <Button
             variant="default"
             size="sm"
             className="hidden md:inline-flex rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold gap-2 text-sm h-9 px-4"
           >
-            <Calendar className="w-4 h-4" /> FREE QUOTE
+            <Calendar className="w-4 h-4" /> GET A QUOTE
           </Button>
         </div>
       </div>
@@ -127,14 +127,14 @@ const SiteHeader = () => {
                   <NavigationMenuItem key={item.label}>
                     <NavLink
                       to={item.to}
-                      className="px-3 py-2 text-sm font-bold text-foreground hover:bg-accent hover:text-primary transition-colors rounded-md"
+                      className="px-3 py-2 text-sm font-bold text-foreground hover:bg-accent hover:text-white transition-colors rounded-md"
                     >
                       {item.label}
                     </NavLink>
                   </NavigationMenuItem>
                 ) : (
                   <NavigationMenuItem key={item.label} className="relative">
-                    <NavigationMenuTrigger className="bg-transparent text-foreground font-bold hover:bg-accent hover:text-primary data-[state=open]:bg-accent data-[state=open]:text-primary rounded-md">
+                    <NavigationMenuTrigger className="bg-transparent text-foreground font-bold hover:bg-accent hover:text-white data-[state=open]:bg-accent data-[state=open]:text-white rounded-md">
                       {item.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -145,14 +145,14 @@ const SiteHeader = () => {
                               {sub.href.startsWith("/") ? (
                                 <NavLink
                                   to={sub.href}
-                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
+                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-white"
                                 >
                                   {sub.label}
                                 </NavLink>
                               ) : (
                                 <a
                                   href={sub.href}
-                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
+                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-white"
                                 >
                                   {sub.label}
                                 </a>
@@ -187,7 +187,7 @@ const SiteHeader = () => {
                         key={item.label}
                         to={item.to}
                         onClick={() => setMobileOpen(false)}
-                        className="px-4 py-3 font-bold text-foreground hover:bg-accent hover:text-primary rounded-lg"
+                        className="px-4 py-3 font-bold text-foreground hover:bg-accent hover:text-white rounded-lg"
                       >
                         {item.label}
                       </NavLink>
@@ -231,14 +231,14 @@ const SiteHeader = () => {
                   <NavigationMenuItem key={item.label}>
                     <NavLink
                       to={item.to}
-                      className="px-3 py-2 text-sm font-bold text-foreground hover:bg-accent hover:text-primary transition-colors rounded-md"
+                      className="px-3 py-2 text-sm font-bold text-foreground hover:bg-accent hover:text-white transition-colors rounded-md"
                     >
                       {item.label}
                     </NavLink>
                   </NavigationMenuItem>
                 ) : (
                   <NavigationMenuItem key={item.label} className="relative">
-                    <NavigationMenuTrigger className="bg-transparent text-foreground font-bold hover:bg-accent hover:text-primary data-[state=open]:bg-accent data-[state=open]:text-primary rounded-md">
+                    <NavigationMenuTrigger className="bg-transparent text-foreground font-bold hover:bg-accent hover:text-white data-[state=open]:bg-accent data-[state=open]:text-white rounded-md">
                       {item.label}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
@@ -249,14 +249,14 @@ const SiteHeader = () => {
                               {sub.href.startsWith("/") ? (
                                 <NavLink
                                   to={sub.href}
-                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
+                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-white"
                                 >
                                   {sub.label}
                                 </NavLink>
                               ) : (
                                 <a
                                   href={sub.href}
-                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
+                                  className="block select-none rounded-md px-3 py-2 text-sm hover:bg-accent hover:text-white"
                                 >
                                   {sub.label}
                                 </a>

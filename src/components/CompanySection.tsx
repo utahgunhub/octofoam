@@ -2,15 +2,15 @@ import { CheckCircle, Calendar, Zap, DollarSign, CalendarCheck, ShieldCheck, Thu
 import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ScrollReveal";
 
 const benefits = [
-  "Affordable HVAC Services",
-  "Wide Range of Heating & Cooling Solutions",
-  "Flexible Financing Options Available",
-  "Serving Salt Lake City and Beyond Since 1987",
+  "Spray Foam Insulation for Residential & Commercial",
+  "Agricultural & Metal Building Insulation Specialists",
+  "SPF Roof Coating Services Available",
+  "Serving Greenfield, IN and Surrounding Areas",
 ];
 
 const features = [
-  { icon: Zap, title: "SAME DAY INSTALLATIONS" },
-  { icon: DollarSign, title: "PRICE MATCH GUARANTEE" },
+  { icon: Zap, title: "FREE\nESTIMATES" },
+  { icon: DollarSign, title: "COMPETITIVE PRICING" },
   { icon: CalendarCheck, title: "FAST & EASY SCHEDULING" },
   { icon: ShieldCheck, title: "LICENSED & FULLY INSURED" },
   { icon: ThumbsUp, title: "SATISFACTION GUARANTEE" },
@@ -19,7 +19,7 @@ const features = [
 const CompanySection = () => (
   <section className="relative -mt-[80px] -mb-[80px] md:-mt-[120px] md:-mb-[120px] pt-[120px] pb-[120px] md:pt-[160px] md:pb-[160px] px-4 overflow-hidden">
     <div className="absolute inset-0">
-      <img src="/background-1.png" alt="" className="absolute inset-0 w-full h-full object-cover" />
+      <img src="/octofoam-images/bigstock-Roof-Insulation-In-Attic-With--469350977-1920w.webp" alt="" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 z-[1]" style={{ backgroundColor: "rgba(255,255,255,0.92)" }} />
     </div>
     <div className="container max-w-6xl mx-auto relative z-10">
@@ -28,11 +28,11 @@ const CompanySection = () => (
         {/* Left content */}
         <ScrollReveal className="flex-1 order-2 lg:order-1">
           <p className="text-accent font-bold uppercase tracking-wide mb-3">
-            Expert Heating & Air Conditioning Services
+            Professional Spray Foam Insulation Services
           </p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 font-display text-foreground uppercase">
-            Reliable HVAC Company in{" "}
-            <span className="text-accent">Salt Lake County, UT</span>
+            Octofoam — Your Insulation Company in{" "}
+            <span className="text-accent">Greenfield, IN</span>
           </h2>
           <ul className="space-y-3 mb-8">
             {benefits.map((b) => (
@@ -48,13 +48,13 @@ const CompanySection = () => (
           </ul>
           <button className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-6 py-3 rounded-xl hover:bg-primary/90 transition-colors">
             <Calendar size={20} />
-            SCHEDULE SERVICE
+            GET A FREE ESTIMATE
           </button>
         </ScrollReveal>
 
         {/* Right image - taller with background accent frame */}
         <ScrollReveal variant="slideRight" className="flex-1 order-1 lg:order-2 w-full lg:max-w-lg">
-          <div className="relative p-4 rounded-2xl border-4 border-accent-warm/70 bg-primary/5">
+          <div className="relative p-4 rounded-2xl border-4 border-[#634390] bg-primary/5">
             {/* Corner foliage accents - top left */}
             <div className="absolute top-2 left-2 w-20 h-20 opacity-25 pointer-events-none">
               <svg viewBox="0 0 80 80" fill="none" className="w-full h-full text-primary">
@@ -70,8 +70,8 @@ const CompanySection = () => (
               </svg>
             </div>
             <img
-              src="/van2.png"
-              alt="Peak HVAC service van"
+              src="/octofoam-images/rigwithbarn1+-+octofoam-1920w.webp"
+              alt="Octofoam spray foam insulation"
               className="relative z-10 w-full min-h-[420px] md:min-h-[520px] object-cover object-center rounded-xl"
             />
           </div>
@@ -84,7 +84,7 @@ const CompanySection = () => (
           <ScrollRevealItem key={f.title}>
             <div className="bg-primary rounded-2xl p-6 text-center flex flex-col items-center gap-4">
               <f.icon size={32} className="text-primary-foreground" />
-              <h3 className="font-bold text-sm text-primary-foreground uppercase tracking-wide">
+              <h3 className="font-bold text-sm text-primary-foreground uppercase tracking-wide whitespace-pre-line">
                 {f.title}
               </h3>
             </div>

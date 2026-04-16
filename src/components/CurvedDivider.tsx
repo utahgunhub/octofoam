@@ -11,9 +11,9 @@ interface CurvedDividerProps {
 }
 
 const CurvedDivider = ({
-  topColor = "hsl(225, 100%, 32%)",
+  topColor = "#5c97d0",
   bottomColor = "hsl(170, 40%, 97%)",
-  accentColor = "hsl(160, 100%, 50%)",
+  accentColor = "#634390",
   direction = "down",
   transparentTop = false,
   transparentBottom = false,
@@ -22,27 +22,45 @@ const CurvedDivider = ({
   const topFill = transparentTop ? "transparent" : topColor;
   const bottomFill = transparentBottom ? "transparent" : bottomColor;
 
-  // "down" = curve bows downward (top color on top, bottom peeks up as a bowl)
-  // "up" = curve bows upward (bottom color on bottom, top drapes down)
-  const curveDown = (
+  // "down" = top section flows into the next section with a wave.
+  // "up" = inverse wave for the opposite transition direction.
+  const waveDown = (
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-[80px] md:h-[120px] block">
       <rect width="1440" height="120" fill={topFill} />
-      <path d="M0,20 Q720,140 1440,20 L1440,120 L0,120 Z" fill={accentColor} />
-      <path d="M0,24 Q720,144 1440,24 L1440,120 L0,120 Z" fill={bottomFill} />
+      <path
+        d="M0,34 C180,86 360,-6 540,34 C720,74 900,-6 1080,34 C1260,74 1350,24 1440,34 L1440,120 L0,120 Z"
+        fill={bottomFill}
+      />
+      <path
+        d="M0,34 C180,86 360,-6 540,34 C720,74 900,-6 1080,34 C1260,74 1350,24 1440,34"
+        fill="none"
+        stroke={accentColor}
+        strokeOpacity="1"
+        strokeWidth="6"
+      />
     </svg>
   );
 
-  const curveUp = (
+  const waveUp = (
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-[80px] md:h-[120px] block">
       <rect width="1440" height="120" fill={bottomFill} />
-      <path d="M0,100 Q720,-20 1440,100 L1440,0 L0,0 Z" fill={accentColor} />
-      <path d="M0,96 Q720,-24 1440,96 L1440,0 L0,0 Z" fill={topFill} />
+      <path
+        d="M0,86 C180,34 360,126 540,86 C720,46 900,126 1080,86 C1260,46 1350,96 1440,86 L1440,0 L0,0 Z"
+        fill={topFill}
+      />
+      <path
+        d="M0,86 C180,34 360,126 540,86 C720,46 900,126 1080,86 C1260,46 1350,96 1440,86"
+        fill="none"
+        stroke={accentColor}
+        strokeOpacity="1"
+        strokeWidth="6"
+      />
     </svg>
   );
 
   return (
     <div className={`w-full overflow-hidden leading-none ${className}`.trim()} style={{ marginTop: "-1px", marginBottom: "-1px" }}>
-      {direction === "down" ? curveDown : curveUp}
+      {direction === "down" ? waveDown : waveUp}
     </div>
   );
 };

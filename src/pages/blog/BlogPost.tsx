@@ -30,7 +30,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>{`${post.title} | Peak HVAC Utah Blog`}</title>
+        <title>{`${post.title} | Octofoam Blog`}</title>
         <meta name="description" content={post.metaDescription} />
         <link rel="canonical" href={`/blog/${post.slug}`} />
       </Helmet>
@@ -38,7 +38,7 @@ const BlogPost = () => {
       <SiteHeader />
 
       <main>
-        <section className="bg-[#001c70] text-white pt-10 pb-16 md:pt-14 md:pb-20 px-4">
+        <section className="bg-[#5c97d0] text-white pt-10 pb-16 md:pt-14 md:pb-20 px-4">
           <div className="container max-w-3xl mx-auto">
             <Link
               to="/blog"
@@ -59,7 +59,7 @@ const BlogPost = () => {
           <div className="container max-w-3xl mx-auto">
             {post.sections.map((section) => (
               <section key={section.heading} className="mb-12 md:mb-14 last:mb-0">
-                <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#001c70] mb-4">
+                <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#5c97d0] mb-4">
                   {section.heading}
                 </h2>
                 {section.paragraphs.map((para, pi) => (
@@ -74,11 +74,11 @@ const BlogPost = () => {
 
         <section className="px-4 py-14 md:py-16 bg-muted/40 border-y border-border">
           <div className="container max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#001c70] mb-2 text-center">
+            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#5c97d0] mb-2 text-center">
               Frequently asked questions
             </h2>
             <p className="text-center text-muted-foreground mb-10 max-w-xl mx-auto">
-              Utah-specific answers for homeowners along the Wasatch Front.
+              Common questions about spray foam insulation in Indiana.
             </p>
             <Accordion type="single" collapsible className="w-full rounded-2xl border border-border bg-card px-2 md:px-4">
               {post.faqs.map((faq, i) => (
@@ -96,10 +96,10 @@ const BlogPost = () => {
         <section className="px-4 py-14 md:py-20 bg-accent text-accent-foreground">
           <div className="container max-w-5xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-extrabold font-display text-center mb-2">
-              What Utah homeowners say
+              What our clients say
             </h2>
             <p className="text-center text-accent-foreground/80 mb-12 max-w-lg mx-auto">
-              Real feedback from neighbors who’ve worked with our team on heating and cooling.
+              Real feedback from Indiana homeowners, farmers, and businesses who’ve worked with Octofoam.
             </p>
             <div className="grid md:grid-cols-3 gap-6 md:gap-8">
               {post.testimonials.map((t, ti) => (
@@ -125,21 +125,20 @@ const BlogPost = () => {
 
         <section className="px-4 py-14 md:py-20">
           <div className="container max-w-2xl mx-auto">
-            <div className="rounded-3xl border-2 border-[#001c70]/15 bg-card shadow-card px-8 py-10 md:px-12 md:py-12 text-center">
+            <div className="rounded-3xl border-2 border-[#5c97d0]/15 bg-card shadow-card px-8 py-10 md:px-12 md:py-12 text-center">
               <h2 className="text-2xl md:text-3xl font-extrabold font-display text-foreground mb-3">
-                Need HVAC help in Utah?
+                Ready to insulate your space?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Call for same-day service when available, or send a message—we serve Salt Lake County, Utah County, Davis
-                County, and nearby communities.
+                Call or text for a free estimate on spray foam insulation in Greenfield, IN and surrounding central Indiana.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="heroPink" size="lg" className="rounded-xl gap-2" asChild>
                   <a href="tel:8017382275">
-                    <Phone size={18} /> (801) 738-2275
+                    <Phone size={18} /> (317) 967-0505
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#001c70] text-[#001c70] hover:bg-[#001c70]/5 gap-2" asChild>
+                <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#5c97d0] text-[#5c97d0] hover:bg-[#5c97d0]/5 gap-2" asChild>
                   <Link to="/contact">
                     Contact us <ArrowRight size={18} />
                   </Link>

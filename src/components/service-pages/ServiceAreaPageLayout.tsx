@@ -11,12 +11,12 @@ import { NavLink } from "@/components/NavLink";
 import heroImg from "@/assets/hero-slc.jpg";
 import type { ServiceAreaRegionContent } from "@/content/serviceAreaRegions";
 
-const dark = "hsl(225, 100%, 32%)";
+const dark = "#5c97d0";
 const light = "hsl(170, 40%, 97%)";
 const white = "#ffffff";
-const mint = "hsl(160, 100%, 50%)";
+const mint = "#634390";
 const skyBlue = "hsl(200, 100%, 50%)";
-const navyBlock = "#001c70";
+const navyBlock = "#5c97d0";
 
 const bgSrc = (n: "1" | "2" | "3" | "4") => `/background-${n}.png`;
 
@@ -122,12 +122,13 @@ const ServiceAreaPageLayout = ({
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-14 md:h-20 block">
-            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill="hsl(225, 100%, 22%)" />
+            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill="#5c97d0" />
+          <path d="M0,40 Q360,0 720,40 T1440,40" fill="none" stroke="#634390" strokeOpacity="1" strokeWidth="6" />
           </svg>
         </div>
       </section>
 
-      <section className="bg-[#001c70] py-5 px-4 border-b border-white/10">
+      <section className="bg-[#5c97d0] py-5 px-4 border-b border-white/10">
         <p className="text-center text-sm md:text-base font-bold text-white max-w-4xl mx-auto">{midStrip}</p>
       </section>
 
@@ -145,13 +146,13 @@ const ServiceAreaPageLayout = ({
           <img src={bgSrc(contentBackground)} alt="" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 z-[1]" style={{ backgroundColor: "rgba(255,255,255,0.92)" }} />
         </div>
-        <div className="container max-w-5xl mx-auto relative z-10 space-y-6 text-[#001c70]/90 leading-relaxed">
+        <div className="container max-w-5xl mx-auto relative z-10 space-y-6 text-[#5c97d0]/90 leading-relaxed">
           {introParagraphs.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
 
           {relatedAreas.length > 0 ? (
-            <p className="text-sm font-semibold text-[#001c70]/80">
+            <p className="text-sm font-semibold text-[#5c97d0]/80">
               Also serving:{" "}
               {relatedAreas.map((r, i) => (
                 <span key={r.to}>
@@ -164,10 +165,10 @@ const ServiceAreaPageLayout = ({
             </p>
           ) : null}
 
-          <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#001c70] pt-4">
+          <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#5c97d0] pt-4">
             Cities &amp; communities we serve
           </h2>
-          <p className="text-[#001c70]/80 text-sm md:text-base -mt-2">
+          <p className="text-[#5c97d0]/80 text-sm md:text-base -mt-2">
             Local HVAC service with neighborhood context—call (801) 738-2275 to confirm availability in your area.
           </p>
 
@@ -175,10 +176,10 @@ const ServiceAreaPageLayout = ({
             {cities.map((c) => (
               <article
                 key={c.name}
-                className="rounded-2xl border border-[#001c70]/15 bg-white/80 p-5 md:p-6 shadow-sm"
+                className="rounded-2xl border border-[#5c97d0]/15 bg-white/80 p-5 md:p-6 shadow-sm"
               >
-                <h3 className="text-lg font-extrabold font-display text-[#001c70] mb-2">{c.name}</h3>
-                <p className="text-sm md:text-[15px] text-[#001c70]/85 leading-relaxed">{c.blurb}</p>
+                <h3 className="text-lg font-extrabold font-display text-[#5c97d0] mb-2">{c.name}</h3>
+                <p className="text-sm md:text-[15px] text-[#5c97d0]/85 leading-relaxed">{c.blurb}</p>
               </article>
             ))}
           </div>
@@ -212,7 +213,7 @@ const ServiceAreaPageLayout = ({
                   <Phone size={18} /> Call now
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#001c70] text-[#001c70] hover:bg-[#001c70]/5 gap-2" asChild>
+              <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#5c97d0] text-[#5c97d0] hover:bg-[#5c97d0]/5 gap-2" asChild>
                 <Link to="/contact">
                   Contact form <ArrowRight size={18} />
                 </Link>

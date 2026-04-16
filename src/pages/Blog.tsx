@@ -28,7 +28,7 @@ const Blog = () => (
                 {p.title}
               </h2>
               <p className="text-muted-foreground mb-4 leading-relaxed text-sm">{p.excerpt}</p>
-              <span className="inline-flex items-center gap-1 text-sm font-bold text-[#001c70] group-hover:underline">
+              <span className="inline-flex items-center gap-1 text-sm font-bold text-[#5c97d0] group-hover:underline">
                 Read article <ArrowRight size={16} />
               </span>
             </Link>

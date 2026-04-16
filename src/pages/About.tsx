@@ -21,86 +21,86 @@ import { Button } from "@/components/ui/button";
 import { ScrollReveal, ScrollRevealStagger, ScrollRevealItem } from "@/components/ScrollReveal";
 import heroImg from "@/assets/hero-slc.jpg";
 
-const dark = "hsl(225, 100%, 32%)";
+const dark = "#5c97d0";
 const light = "hsl(170, 40%, 97%)";
 const white = "#ffffff";
-const mint = "hsl(160, 100%, 50%)";
+const mint = "#634390";
 const skyBlue = "hsl(200, 100%, 50%)";
-const navyBlock = "#001c70";
+const navyBlock = "#5c97d0";
 
 const stats = [
-  { value: "15+", label: "Years serving Utah" },
-  { value: "53+", label: "Projects completed" },
-  { value: "2", label: "Dedicated team members" },
-  { value: "5", label: "Counties served" },
+  { value: "10+", label: "Years of experience" },
+  { value: "500+", label: "Projects completed" },
+  { value: "3", label: "Dedicated team members" },
+  { value: "6+", label: "Counties served" },
 ];
 
 const serviceBlocks = [
   {
-    title: "HVAC installation & AC repair",
+    title: "Attic & Crawl Space Insulation",
     icon: Wrench,
     bullets: [
-      "Professional HVAC installation and air conditioning repair",
-      "Full system replacement typically $5,000–$16,000 depending on home size and equipment",
-      "24/7 emergency HVAC repair when you need help fast",
-      "Serving Salt Lake City, Provo, Ogden, and surrounding communities",
+      "Open and closed cell spray foam for attics and crawl spaces",
+      "Prevents moisture, air intrusion, and allergens",
+      "More effective than fiberglass insulation",
+      "Serving Greenfield, Indianapolis, and surrounding areas",
     ],
   },
   {
-    title: "Air conditioning",
+    title: "Metal Building & Agricultural Foam",
     icon: Snowflake,
     bullets: [
-      "Central air installation and replacement",
-      "AC system repair and diagnostics",
-      "Ductless / mini-split installation",
-      "Seasonal AC maintenance and tune-ups",
+      "Spray foam insulation for barns, grain bins, and metal buildings",
+      "Adds structural stability to metal structures",
+      "Protects against condensation and moisture damage",
+      "Built to handle Indiana's climate extremes",
     ],
   },
   {
-    title: "Heating repair & installation",
+    title: "SPF Roof Coatings",
     icon: Flame,
     bullets: [
-      "Furnace repair and safety checks",
-      "Heating system installation",
-      "Heating maintenance before winter",
-      "Emergency heating service",
+      "Spray polyurethane foam roof coating services",
+      "Extends roof life and reduces energy costs",
+      "Seamless, waterproof barrier for flat and low-slope roofs",
+      "Commercial and agricultural applications",
     ],
   },
   {
-    title: "Water heaters",
+    title: "Concrete Leveling",
     icon: Droplets,
     bullets: [
-      "Tank and tankless water heater installation",
-      "Gas and electric units",
-      "Repairs and replacements with proper venting and connections",
-      "Professional installation and code-conscious workmanship",
+      "Professional concrete leveling and lifting",
+      "Fix uneven slabs, driveways, and walkways",
+      "Fast, cost-effective alternative to replacement",
+      "Residential and commercial concrete work",
     ],
   },
 ];
 
 const portfolio = [
   {
-    tag: "HVAC",
-    title: "Residential air conditioning",
-    copy: "High-efficiency residential cooling system installed for reliable comfort and strong energy performance in a Utah home.",
+    tag: "Insulation",
+    title: "Attic spray foam insulation",
+    copy: "High-performance spray foam applied in residential attics for lasting energy efficiency and air sealing.",
     img: "/cooling.png",
   },
   {
-    tag: "HVAC",
-    title: "Furnace installation & ductwork",
-    copy: "Energy-efficient furnace with ductwork planned for even heat distribution through the whole home.",
+    tag: "Insulation",
+    title: "Metal building insulation",
+    copy: "Closed-cell spray foam applied to metal agricultural and commercial buildings for temperature control and moisture protection.",
     img: "/heating.png",
   },
   {
-    tag: "HVAC",
-    title: "On-site installation crew",
-    copy: "Equipped service vehicles and experienced technicians ready for installs, changeouts, and emergency calls.",
+    tag: "Roofing",
+    title: "SPF roof coating",
+    copy: "Spray polyurethane foam roof coating applied to commercial flat roofs for a seamless, waterproof barrier.",
     img: "/van2.png",
   },
   {
-    tag: "HVAC",
-    title: "Residential heating & cooling",
-    copy: "Complete comfort solutions tailored to Utah’s hot summers and cold snaps—sizing and options explained clearly.",
+    tag: "Insulation",
+    title: "Crawl space sealing",
+    copy: "Complete crawl space insulation and air sealing to prevent moisture intrusion and improve home comfort.",
     img: "/van.png",
   },
 ];
@@ -108,10 +108,10 @@ const portfolio = [
 const About = () => (
   <div className="min-h-screen bg-background">
     <Helmet>
-      <title>About Peak HVAC Services | Utah HVAC & AC Company</title>
+      <title>About Octofoam | Spray Foam Insulation Company in Greenfield, IN</title>
       <meta
         name="description"
-        content="Meet Peak HVAC Services—Utah HVAC installation, AC repair, heating, and water heaters. Licensed technicians, emergency service, and honest pricing along the Wasatch Front."
+        content="Meet Octofoam, LLC — your spray foam insulation company of choice in Greenfield, IN. Serving agricultural, commercial, and residential clients throughout central Indiana."
       />
       <link rel="canonical" href="/about" />
     </Helmet>
@@ -133,18 +133,17 @@ const About = () => (
 
         <div className="relative z-10 w-full px-4 py-16 md:py-20">
           <div className="container max-w-4xl mx-auto text-center">
-            <p className="text-white/90 font-bold uppercase tracking-widest text-xs md:text-sm mb-4">About our team</p>
+            <p className="text-white/90 font-bold uppercase tracking-widest text-xs md:text-sm mb-4">About our company</p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white font-display leading-tight mb-4">
-              Utah&apos;s trusted <span className="text-primary">HVAC &amp; AC</span> team
+              Indiana&apos;s trusted <span className="text-primary">Spray Foam</span> company
             </h1>
             <p className="text-base md:text-lg text-white/95 font-semibold max-w-2xl mx-auto mb-8">
-              Professional HVAC installation, AC repair, and heating services throughout Utah—quality solutions you can
-              count on.
+              Professional spray foam insulation for agricultural, commercial, and residential clients in Greenfield, IN and beyond.
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3">
               <Button variant="heroPink" size="lg" className="rounded-xl gap-2 shadow-elevated" asChild>
-                <a href="tel:8017382275">
-                  <Phone size={18} /> (801) 738-2275
+                <a href="tel:3179670505">
+                  <Phone size={18} /> (317) 967-0505
                 </a>
               </Button>
               <Button variant="hero" size="lg" className="rounded-xl gap-2 shadow-elevated" asChild>
@@ -158,14 +157,15 @@ const About = () => (
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="w-full h-14 md:h-20 block">
-            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill="hsl(225, 100%, 22%)" />
+            <path d="M0,40 Q360,0 720,40 T1440,40 L1440,80 L0,80 Z" fill="#5c97d0" />
+          <path d="M0,40 Q360,0 720,40 T1440,40" fill="none" stroke="#634390" strokeOpacity="1" strokeWidth="6" />
           </svg>
         </div>
       </section>
 
-      <section className="bg-[#001c70] py-5 px-4 border-b border-white/10">
+      <section className="bg-[#5c97d0] py-5 px-4 border-b border-white/10">
         <p className="text-center text-sm md:text-base font-bold text-white max-w-3xl mx-auto">
-          Licensed Utah HVAC · Emergency service when you need it · Greater Wasatch Front
+          Licensed & Insured · Greenfield, IN · Agricultural · Commercial · Residential
         </p>
       </section>
 
@@ -186,19 +186,17 @@ const About = () => (
         <div className="container max-w-6xl mx-auto relative z-10">
           <ScrollReveal>
             <p className="text-accent font-bold uppercase tracking-wide text-sm text-center mb-3">Who we are</p>
-            <p className="text-center text-lg md:text-xl text-[#001c70]/90 max-w-3xl mx-auto leading-relaxed mb-12">
-              Peak HVAC Services is a Utah HVAC company serving the greater Wasatch Front with heating, cooling, and
-              water heater work backed by clear communication and careful installs. From same-day repairs when slots allow
-              to full system replacements, we focus on work that lasts—not quick patches that fail next season.
+            <p className="text-center text-lg md:text-xl text-[#5c97d0]/90 max-w-3xl mx-auto leading-relaxed mb-12">
+              Octofoam, LLC is a spray foam insulation company serving agricultural, commercial, and residential clients throughout central Indiana. We focus on doing the job right — with quality materials, clean installs, and honest pricing.
             </p>
           </ScrollReveal>
 
           <ScrollRevealStagger className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((s) => (
               <ScrollRevealItem key={s.label}>
-                <div className="rounded-2xl border border-[#001c70]/12 bg-white/90 p-6 text-center shadow-sm">
-                  <div className="text-3xl md:text-4xl font-extrabold text-[#001c70] font-display mb-1">{s.value}</div>
-                  <div className="text-sm font-semibold text-[#001c70]/75">{s.label}</div>
+                <div className="rounded-2xl border border-[#5c97d0]/12 bg-white/90 p-6 text-center shadow-sm">
+                  <div className="text-3xl md:text-4xl font-extrabold text-[#5c97d0] font-display mb-1">{s.value}</div>
+                  <div className="text-sm font-semibold text-[#5c97d0]/75">{s.label}</div>
                 </div>
               </ScrollRevealItem>
             ))}
@@ -217,11 +215,9 @@ const About = () => (
               </div>
               <div>
                 <p className="text-primary font-bold uppercase tracking-wide text-sm mb-1">Leadership</p>
-                <h2 className="text-2xl md:text-3xl font-extrabold font-display mb-3">Mishon — Founder &amp; owner</h2>
+                <h2 className="text-2xl md:text-3xl font-extrabold font-display mb-3">Octofoam — Founder &amp; Owner</h2>
                 <p className="text-accent-foreground/85 leading-relaxed">
-                  With 15 years of experience in HVAC installation, home improvement, and construction, Mishon built Peak
-                  HVAC Services around straightforward service and quality craftsmanship for Utah families—whether you
-                  need a tune-up, a repair, or a full equipment changeout.
+                  With years of hands-on experience in spray foam insulation, roofing, and concrete leveling, Octofoam was built on a foundation of quality workmanship and honest service for Indiana homeowners, farmers, and businesses alike.
                 </p>
               </div>
             </div>
@@ -233,16 +229,14 @@ const About = () => (
                 <h3 className="text-xl font-extrabold font-display">Our commitment</h3>
               </div>
               <p className="text-accent-foreground/85 leading-relaxed mb-6">
-                Our technicians are licensed, insured, and background-checked. We offer emergency service when you need
-                it, professional installation, and honest recommendations—with pricing explained before major work
-                begins.
+                Our team is licensed, insured, and committed to doing the job right the first time. We provide free estimates and explain every option before work begins — no surprises.
               </p>
               <ul className="space-y-3">
                 {[
-                  "Licensed & insured HVAC work",
-                  "Background-checked team",
-                  "24/7 emergency service available",
-                  "Upfront options on repairs and replacements",
+                  "Licensed & insured spray foam work",
+                  "Experienced, professional crew",
+                  "Free estimates on all projects",
+                  "Agricultural, commercial & residential",
                 ].map((t) => (
                   <li key={t} className="flex gap-2 text-sm font-semibold">
                     <Check className="text-primary shrink-0 mt-0.5" size={18} />
@@ -264,8 +258,7 @@ const About = () => (
               What we <span className="text-primary">do</span>
             </h2>
             <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-              Professional HVAC and water heater services across Utah—clear scope, dependable workmanship, and respect
-              for your home.
+              Professional spray foam insulation and related services across central Indiana — clear scope, dependable workmanship, and respect for your property.
             </p>
           </ScrollReveal>
 
@@ -338,25 +331,24 @@ const About = () => (
                 <Star key={i} className="w-6 h-6 fill-[#FFC107] text-[#FFC107]" />
               ))}
             </div>
-            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-center text-[#001c70] mb-8">
-              Loved by homeowners
+            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-center text-[#5c97d0] mb-8">
+              Loved by our clients
             </h2>
-            <blockquote className="rounded-3xl border border-[#001c70]/12 bg-white/95 p-8 md:p-10 shadow-card text-center">
-              <p className="text-lg md:text-xl text-[#001c70]/90 leading-relaxed font-medium">
-                &ldquo;Very professional and 100% would recommend Mischon to anyone!! I&apos;ve used him many times.
-                He&apos;s very experienced and does a fantastic job!!&rdquo;
+            <blockquote className="rounded-3xl border border-[#5c97d0]/12 bg-white/95 p-8 md:p-10 shadow-card text-center">
+              <p className="text-lg md:text-xl text-[#5c97d0]/90 leading-relaxed font-medium">
+                &ldquo;Very professional and 100% would recommend Octofoam to anyone!! I&apos;ve used them many times.
+                They&apos;re very experienced and do a fantastic job!!&rdquo;
               </p>
-              <footer className="mt-6 text-sm font-bold text-[#001c70]">— Vera Bee</footer>
+              <footer className="mt-6 text-sm font-bold text-[#5c97d0]">— Vera B.</footer>
             </blockquote>
           </ScrollReveal>
 
           <ScrollReveal>
             <div className="text-center">
               <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#001c70] mb-3">Get your estimate</h2>
-              <p className="text-[#001c70]/80 mb-8 max-w-2xl mx-auto">
-                Ready for repair, maintenance, or a new system? Call us or send a message—we&apos;ll walk through options
-                and scheduling.
+              <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#5c97d0] mb-3">Get your free estimate</h2>
+              <p className="text-[#5c97d0]/80 mb-8 max-w-2xl mx-auto">
+                Ready to insulate your home, farm, or business? Call or text us and we&apos;ll walk through options and scheduling.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Button variant="heroPink" size="lg" className="rounded-xl gap-2" asChild>
@@ -364,15 +356,14 @@ const About = () => (
                     <Phone size={18} /> (801) 738-2275
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#001c70] text-[#001c70] hover:bg-[#001c70]/5 gap-2" asChild>
+                <Button variant="outline" size="lg" className="rounded-xl border-2 border-[#5c97d0] text-[#5c97d0] hover:bg-[#5c97d0]/5 gap-2" asChild>
 <Link to="/contact">
                   Contact form <ArrowRight size={18} />
                 </Link>
                 </Button>
               </div>
-              <p className="mt-8 text-sm text-[#001c70]/75">
-                <span className="font-semibold text-[#001c70]">Service area:</span> Greater Wasatch Front — Weber, Davis,
-                Utah, Salt Lake, and Summit counties.
+              <p className="mt-8 text-sm text-[#5c97d0]/75">
+                <span className="font-semibold text-[#5c97d0]">Service area:</span> Greenfield, Indianapolis, and surrounding central Indiana counties.
               </p>
             </div>
           </ScrollReveal>

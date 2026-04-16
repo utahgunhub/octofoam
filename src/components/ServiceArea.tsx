@@ -1,18 +1,18 @@
 import { MapPin } from "lucide-react";
 
 const cities = [
-  "Salt Lake City", "Sandy", "Draper", "Herriman",
-  "West Jordan", "Riverton", "South Jordan", "Murray",
+  "Greenfield", "Indianapolis", "Shelbyville", "Anderson",
+  "Pendleton", "New Palestine", "Fortville", "McCordsville",
 ];
 
 const ServiceArea = () => (
   <section className="py-20 px-4 bg-accent text-accent-foreground">
     <div className="container max-w-6xl mx-auto text-center">
       <h2 className="text-3xl md:text-4xl font-extrabold mb-4 font-display">
-        Serving All of Salt Lake County, UT
+        Serving Greenfield, IN &amp; Surrounding Areas
       </h2>
       <p className="text-accent-foreground/80 mb-12 text-lg">
-        Proudly providing HVAC services across the Salt Lake Valley
+        Proudly providing spray foam insulation services throughout central Indiana
       </p>
       <div className="flex flex-wrap justify-center gap-4">
         {cities.map((city) => (
