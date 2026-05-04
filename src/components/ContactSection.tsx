@@ -1,3 +1,5 @@
+import { FormEvent, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Phone, Mail, MapPin, Send } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
@@ -5,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { toast } from "@/components/ui/sonner";
 
 export type ContactSectionVariant = "home" | "page";
 
@@ -12,8 +15,56 @@ interface ContactSectionProps {
   variant?: ContactSectionVariant;
 }
 
+const EMAILJS_SERVICE_ID = "service_4s5lsdc";
+const EMAILJS_PUBLIC_KEY = "LHhhab8fiZXeSNaGT";
+const EMAILJS_TEMPLATE_ID = "template_d73jsr5";
+
 const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
   const isHome = variant === "home";
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          from_name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          from_email: formData.email,
+          message: formData.message,
+          page_source: isHome ? "Homepage contact form" : "Contact page form",
+        },
+        {
+          publicKey: EMAILJS_PUBLIC_KEY,
+        },
+      );
+
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+      toast.success("Message sent! We'll reach out shortly.");
+    } catch (error) {
+      console.error("EmailJS send failed", error);
+      toast.error("We couldn't send your message. Please call or text us at (317) 967-0505.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
   <section
@@ -95,7 +146,7 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
           <h3 className="text-2xl font-extrabold text-foreground mb-6 font-display">
             Send us a message
           </h3>
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid sm:grid-cols-2 gap-6">
               <div className="space-y-2">
                 <Label htmlFor="name" className="text-foreground font-semibold">
@@ -103,8 +154,12 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
                 </Label>
                 <Input
                   id="name"
+                  name="name"
+                  required
                   placeholder="Your name"
                   className="h-12 rounded-xl border-2 bg-white"
+                  value={formData.name}
+                  onChange={(event) => setFormData((prev) => ({ ...prev, name: event.target.value }))}
                 />
               </div>
               <div className="space-y-2">
@@ -113,9 +168,12 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
                 </Label>
                 <Input
                   id="phone"
+                  name="phone"
                   type="tel"
                   placeholder="(317) 967-0505"
                   className="h-12 rounded-xl border-2 bg-white"
+                  value={formData.phone}
+                  onChange={(event) => setFormData((prev) => ({ ...prev, phone: event.target.value }))}
                 />
               </div>
             </div>
@@ -125,9 +183,13 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
               </Label>
               <Input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="you@example.com"
                 className="h-12 rounded-xl border-2 bg-white"
+                required
+                value={formData.email}
+                onChange={(event) => setFormData((prev) => ({ ...prev, email: event.target.value }))}
               />
             </div>
             <div className="space-y-2">
@@ -136,8 +198,12 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
               </Label>
               <Textarea
                 id="message"
+                name="message"
                 placeholder="Tell us about your project—attic, crawl space, metal building, roof coating..."
                 className="min-h-[140px] rounded-xl border-2 bg-white resize-none"
+                required
+                value={formData.message}
+                onChange={(event) => setFormData((prev) => ({ ...prev, message: event.target.value }))}
               />
             </div>
             <Button
@@ -145,9 +211,10 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
               variant="hero"
               size="lg"
               className="w-full sm:w-auto gap-2 rounded-xl h-14 px-10 text-base font-bold"
+              disabled={isSubmitting}
             >
               <Send size={20} />
-              Send Message
+              {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>
