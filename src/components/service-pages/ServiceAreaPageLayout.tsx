@@ -107,8 +107,8 @@ const ServiceAreaPageLayout = ({
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button variant="heroPink" size="lg" className="rounded-xl shadow-elevated gap-2" asChild>
-                <a href="tel:8017382275">
-                  <Phone size={18} /> (801) 738-2275
+                <a href="tel:3179670505">
+                  <Phone size={18} /> (317) 967-0505
                 </a>
               </Button>
               <Button variant="hero" size="lg" className="hidden md:inline-flex rounded-xl shadow-elevated gap-2" asChild>
@@ -169,7 +169,7 @@ const ServiceAreaPageLayout = ({
             Cities &amp; communities we serve
           </h2>
           <p className="text-[#5c97d0]/80 text-sm md:text-base -mt-2">
-            Local HVAC service with neighborhood context—call (801) 738-2275 to confirm availability in your area.
+            Local spray foam service with neighborhood context-call (317) 967-0505 to confirm availability in your area.
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4 md:gap-5 pt-2">
@@ -209,7 +209,7 @@ const ServiceAreaPageLayout = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="heroPink" size="lg" className="rounded-xl gap-2" asChild>
-                <a href="tel:8017382275">
+                <a href="tel:3179670505">
                   <Phone size={18} /> Call now
                 </a>
               </Button>

@@ -157,24 +157,24 @@ function MidSection({ variant }: { variant: AcPageVisualVariant }) {
     <section className="py-10 px-4 bg-[#5c97d0]">
       <div className="container max-w-6xl mx-auto grid md:grid-cols-3 gap-4">
         <Link
-          to="/air-conditioning/repair"
+          to="/attic-insulation"
           className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 border border-white/15 px-6 py-5 text-white hover:bg-white/15 transition-colors"
         >
-          <span className="font-bold font-display">AC repair</span>
+          <span className="font-bold font-display">Attic insulation</span>
           <ChevronRight className="text-primary shrink-0 group-hover:translate-x-0.5 transition-transform" size={22} />
         </Link>
         <Link
-          to="/air-conditioning/installation"
+          to="/crawl-space-insulation"
           className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 border border-white/15 px-6 py-5 text-white hover:bg-white/15 transition-colors"
         >
-          <span className="font-bold font-display">AC installation</span>
+          <span className="font-bold font-display">Crawl space insulation</span>
           <ChevronRight className="text-primary shrink-0 group-hover:translate-x-0.5 transition-transform" size={22} />
         </Link>
         <Link
-          to="/air-conditioning/maintenance"
+          to="/metal-building-insulation"
           className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 border border-white/15 px-6 py-5 text-white hover:bg-white/15 transition-colors"
         >
-          <span className="font-bold font-display">AC maintenance</span>
+          <span className="font-bold font-display">Metal building insulation</span>
           <ChevronRight className="text-primary shrink-0 group-hover:translate-x-0.5 transition-transform" size={22} />
         </Link>
       </div>
@@ -235,8 +235,8 @@ const AcServicePageLayout = ({
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button variant="heroPink" size="lg" className="rounded-xl shadow-elevated gap-2" asChild>
-                <a href="tel:8017382275">
-                  <Phone size={18} /> (801) 738-2275
+                <a href="tel:3179670505">
+                  <Phone size={18} /> (317) 967-0505
                 </a>
               </Button>
               <Button variant="hero" size="lg" className="hidden md:inline-flex rounded-xl shadow-elevated gap-2" asChild>
@@ -305,7 +305,7 @@ const AcServicePageLayout = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="heroPink" size="lg" className="rounded-xl gap-2" asChild>
-                <a href="tel:8017382275">
+                <a href="tel:3179670505">
                   <Phone size={18} /> Call now
                 </a>
               </Button>

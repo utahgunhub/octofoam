@@ -114,8 +114,11 @@ const SiteHeader = () => {
             variant="default"
             size="sm"
             className="hidden md:inline-flex rounded-full bg-primary text-primary-foreground hover:bg-primary/90 font-bold gap-2 text-sm h-9 px-4"
+            asChild
           >
-            <Calendar className="w-4 h-4" /> GET A QUOTE
+            <a href="/contact#contact-form">
+              <Calendar className="w-4 h-4" /> GET A QUOTE
+            </a>
           </Button>
         </div>
       </div>

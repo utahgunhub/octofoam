@@ -1,4 +1,13 @@
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const serviceLinks = [
+  { label: "Attic Insulation", to: "/attic-insulation" },
+  { label: "Crawl Space Insulation", to: "/crawl-space-insulation" },
+  { label: "Metal Building Insulation", to: "/metal-building-insulation" },
+  { label: "Concrete Leveling", to: "/concrete-leveling" },
+  { label: "SPF Roof Coatings", to: "/spf-roof-coatings" },
+];
 
 const SiteFooter = () => (
   <footer className="bg-accent text-accent-foreground pt-8 pb-8 px-4">
@@ -8,9 +17,9 @@ const SiteFooter = () => (
         <div>
           <h3 className="font-bold text-lg mb-4 font-display">Our Services</h3>
           <ul className="space-y-2 text-accent-foreground/80">
-            {["Attic Insulation", "Crawl Space Insulation", "Metal Building Insulation", "Concrete Leveling", "SPF Roof Coatings"].map((link) => (
-              <li key={link}>
-                <a href="#" className="hover:text-secondary transition-colors">{link}</a>
+            {serviceLinks.map((link) => (
+              <li key={link.to}>
+                <Link to={link.to} className="hover:text-secondary transition-colors">{link.label}</Link>
               </li>
             ))}
           </ul>
@@ -27,9 +36,9 @@ const SiteFooter = () => (
               <Phone size={18} />
               <span>(317) 967-0505</span>
             </a>
-            <a href="mailto:info@octofoam.com" className="flex items-center gap-2 text-accent-foreground/80 hover:text-secondary transition-colors">
+            <a href="mailto:octofoam@octofoam.com" className="flex items-center gap-2 text-accent-foreground/80 hover:text-secondary transition-colors">
               <Mail size={18} />
-              <span>info@octofoam.com</span>
+              <span>octofoam@octofoam.com</span>
             </a>
           </div>
         </div>

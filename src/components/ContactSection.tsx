@@ -111,7 +111,7 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
               </div>
             </a>
             <a
-              href="mailto:info@octofoam.com"
+              href="mailto:octofoam@octofoam.com"
               className="flex items-center gap-4 group"
             >
               <div className="w-12 h-12 rounded-xl bg-[#5c97d0]/10 flex items-center justify-center group-hover:bg-[#5c97d0]/20 transition-colors">
@@ -119,7 +119,7 @@ const ContactSection = ({ variant = "home" }: ContactSectionProps) => {
               </div>
               <div>
                 <p className="text-sm font-medium text-foreground">Email</p>
-                <p className="text-lg font-bold text-foreground">info@octofoam.com</p>
+                <p className="text-lg font-bold text-foreground">octofoam@octofoam.com</p>
               </div>
             </a>
             <div className="flex items-start gap-4">

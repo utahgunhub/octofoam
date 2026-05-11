@@ -159,24 +159,24 @@ function MidSection({ variant }: { variant: HeatingVisualVariant }) {
     <section className="py-10 px-4 bg-[#5c97d0]">
       <div className="container max-w-6xl mx-auto grid md:grid-cols-3 gap-4">
         <Link
-          to="/heating/furnace-repair"
+          to="/spf-roof-benefits"
           className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 border border-white/15 px-6 py-5 text-white hover:bg-white/15 transition-colors"
         >
-          <span className="font-bold font-display">Furnace repair</span>
+          <span className="font-bold font-display">SPF roof benefits</span>
           <ChevronRight className="text-primary shrink-0 group-hover:translate-x-0.5 transition-transform" size={22} />
         </Link>
         <Link
-          to="/heating/furnace-installation"
+          to="/spf-roof-coatings"
           className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 border border-white/15 px-6 py-5 text-white hover:bg-white/15 transition-colors"
         >
-          <span className="font-bold font-display">Furnace installation</span>
+          <span className="font-bold font-display">SPF roof coatings</span>
           <ChevronRight className="text-primary shrink-0 group-hover:translate-x-0.5 transition-transform" size={22} />
         </Link>
         <Link
-          to="/heating/maintenance"
+          to="/concrete-leveling"
           className="group flex items-center justify-between gap-4 rounded-2xl bg-white/10 border border-white/15 px-6 py-5 text-white hover:bg-white/15 transition-colors"
         >
-          <span className="font-bold font-display">Heating maintenance</span>
+          <span className="font-bold font-display">Concrete leveling</span>
           <ChevronRight className="text-primary shrink-0 group-hover:translate-x-0.5 transition-transform" size={22} />
         </Link>
       </div>
@@ -245,8 +245,8 @@ const HeatingServicePageLayout = ({
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Button variant="heroPink" size="lg" className="rounded-xl shadow-elevated gap-2" asChild>
-                <a href="tel:8017382275">
-                  <Phone size={18} /> (801) 738-2275
+                <a href="tel:3179670505">
+                  <Phone size={18} /> (317) 967-0505
                 </a>
               </Button>
               <Button variant="hero" size="lg" className="hidden md:inline-flex rounded-xl shadow-elevated gap-2" asChild>
@@ -316,7 +316,7 @@ const HeatingServicePageLayout = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button variant="heroPink" size="lg" className="rounded-xl gap-2" asChild>
-                <a href="tel:8017382275">
+                <a href="tel:3179670505">
                   <Phone size={18} /> Call now
                 </a>
               </Button>

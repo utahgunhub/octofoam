@@ -48,11 +48,15 @@ const HeroSection = () => {
             transition={{ type: "spring", stiffness: 100, damping: 16, delay: 0.7 }}
           >
             <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="gap-2 rounded-xl shadow-elevated bg-[#634390] hover:bg-[#634390]/90 text-white font-bold">
-                <Phone size={18} /> (317) 967-0505
+              <Button size="lg" className="gap-2 rounded-xl shadow-elevated bg-[#634390] hover:bg-[#634390]/90 text-white font-bold" asChild>
+                <a href="tel:3179670505">
+                  <Phone size={18} /> (317) 967-0505
+                </a>
               </Button>
-              <Button variant="hero" size="lg" className="hidden md:inline-flex gap-2 rounded-xl shadow-elevated">
-                <Calendar size={18} /> GET A QUOTE
+              <Button variant="hero" size="lg" className="hidden md:inline-flex gap-2 rounded-xl shadow-elevated" asChild>
+                <a href="/contact#contact-form">
+                  <Calendar size={18} /> GET A QUOTE
+                </a>
               </Button>
             </div>
           </motion.div>
