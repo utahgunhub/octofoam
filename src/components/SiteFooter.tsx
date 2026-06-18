@@ -73,8 +73,19 @@ const SiteFooter = () => (
         </div>
       </div>
 
-      <div className="border-t border-accent-foreground/10 pt-6 text-center text-sm text-accent-foreground/50">
-        © 2026 Octofoam, LLC. All Rights Reserved.
+      <div className="border-t border-accent-foreground/10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm text-accent-foreground/50">
+        <p>© 2026 Octofoam, LLC. All Rights Reserved.</p>
+        <p>
+          Website created by{" "}
+          <a
+            href="https://www.zensitemedia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-accent-foreground transition-colors"
+          >
+            Zensite Media
+          </a>
+        </p>
       </div>
     </div>
   </footer>
