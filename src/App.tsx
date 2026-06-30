@@ -26,6 +26,7 @@ import ServiceAreaIndianapolis from "./pages/ServiceAreaIndianapolis";
 import ServiceAreaNewPalestine from "./pages/ServiceAreaNewPalestine";
 import ServiceAreaKnightstown from "./pages/ServiceAreaKnightstown";
 import ServiceAreaFortville from "./pages/ServiceAreaFortville";
+import Review from "./pages/Review";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/review" element={<Review />} />
           <Route path="/attic-insulation" element={<AtticInsulation />} />
           <Route path="/crawl-space-insulation" element={<CrawlSpaceInsulation />} />
           <Route path="/metal-building-insulation" element={<MetalBuildingInsulation />} />
